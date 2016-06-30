@@ -1,0 +1,33 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+Viewing a diff between two versions of a file helped me see the bug that was
+introduced in two key ways: 
+1) It narrows the amount of text that has to be searched for differences
+2) It puts the changes near each other on the screen so it's easier to scan
+   the details of the differences without flipping back and forth between 
+   windows / files / etc.
+3) It highlights the lines containing the changes
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+Several ways:
+1) No time wasted managing files - copying them, moving them around, finding the previous version you want
+2) If there's a problem and you need to roll back, you can instead of having to re-create the previous state
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+This answer depends on the use case. For coding, manually choosing when to create a new commit makes more sense because you don't want commits that don't work and auto committing would create some snapshots that don't work.  The pro of auto committing would be that you don't have to remember to commit, but it's not hard to remember that once you've had a bit of practice, so it's not a very big pro.
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+It has to do with the use case. When writing text documents, what matters is that you save the text that has been produced.  Typically you work on one document at a time.  A logical chunk of work is typically a chunk of text in a single document.  In writing code, on the other hand, a logical unit of work is a change to a feature or function typically, which might involve changing code in several files at once.  Tracking one file at a time would make it difficult to figure out all the logical changes that belong together and if you wanted to roll back, figuring out which files to roll back to which versions would be challelnging.
+
+How can you use the commands git log and git diff to view the history of files?
+git log lets you pull up the list of all the logical changes you have made to your proejct (one per commit, ideally).  git diff allows you to compare any two commits.  So you can see the history of your changes in git log and any time you want to see incremental changes you can diff the two sets of files of interest.
+
+How might using version control make you more confident to make changes that could break something?
+I know I can always revert to the previous version and also it's a lot easier to track down bugs that are introduced between versions, so there's low risk in trying things out.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+Managing coding projects both software engineering and reproducible science / data science.
