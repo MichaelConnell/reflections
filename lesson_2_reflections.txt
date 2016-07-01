@@ -24,3 +24,8 @@ The diagrams help visualize where branches split off and what's reachable and no
 > What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 
 The result of merging two branches together is to create a commit with two parents which were the tips of the two merged branches, and then to move the label of the branch you are on (the branch merged into) to the new commit.
+
+> What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+Pros: automatic merging saves a lot of work and can be pretty safe much of the time. 
+Cons: There are cases where automatic merging will not do the right thing - for example, if we both create a new function that does the same thing but has different names git can't detect that and will include both which would probably cause problems with the code functioning.
