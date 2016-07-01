@@ -16,3 +16,7 @@ Just add the files that are related to the commit - or the parts of files - to t
 2) When people are working on lots of different features and bug fixes at different parts oft he code at the same time
 3) When you want to try something experimental and be able to switch back to the main branch to show the current working version
 4) When you want to try several experiments in parallel at once
+
+> How do the diagrams help you visualize the branch structure?
+
+The diagrams help visualize where branches split off and what's reachable and not reachable.  Since a git repo is organized as a directed graph, commits are only reachable from the current head (checked out commit) if they are on a path including direct ancestors of the current commit and the graphs help make this structure clear.
