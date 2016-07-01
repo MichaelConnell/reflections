@@ -20,3 +20,7 @@ Just add the files that are related to the commit - or the parts of files - to t
 > How do the diagrams help you visualize the branch structure?
 
 The diagrams help visualize where branches split off and what's reachable and not reachable.  Since a git repo is organized as a directed graph, commits are only reachable from the current head (checked out commit) if they are on a path including direct ancestors of the current commit and the graphs help make this structure clear.
+
+> What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+The result of merging two branches together is to create a commit with two parents which were the tips of the two merged branches, and then to move the label of the branch you are on (the branch merged into) to the new commit.
